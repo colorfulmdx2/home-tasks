@@ -1,0 +1,23 @@
+@import '../../sass/variables';
+
+input.input  {
+  outline: none;
+  border: none;
+  color: deepskyblue;
+  background: $background;
+  height: 50px;
+  width: 350px;
+  padding: 5%;
+  font-size: 30px;
+}
+input.inputError  {
+  outline: none;
+  border: none;
+  border-left: 7px solid red !important;
+  color: deepskyblue;
+  background: $background;
+  height: 50px;
+  width: 350px;
+  padding: 5%;
+  font-size: 30px;
+}

@@ -1,0 +1,43 @@
+@import '../sass/variables';
+
+.task {
+
+  padding: 10px 5px;
+  box-sizing: border-box;
+  color: $textColor;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .importance {
+      min-width: 10%;
+      color: orangered;
+      box-sizing: border-box;
+      padding-left: 10px;
+      text-align: center;
+    }
+    .taskMessage {
+      min-width: 70%;
+      text-align: center;
+    }
+    .button {
+      min-width: 10%;
+      padding: 10px;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #3f4042;
+      color: deepskyblue;
+      border-radius: 10px;
+      transition: all 0.1s ease-out;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../sass/variables';
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 83px;
+  left: 681px;
+  background: $background;
+  width: 500px;
+  height: 100px;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  &:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease-out;
+  }
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

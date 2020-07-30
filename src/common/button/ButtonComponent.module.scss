@@ -1,0 +1,26 @@
+@import '../../sass/variables';
+
+.buttonRegular {
+  box-sizing: border-box;
+  background: $background ;
+  outline: none;
+  border: none;
+  color: dodgerblue;
+  font-size: 70px;
+  &:hover {
+    color: deepskyblue;
+    transition: all 0.3s ease-out;
+  }
+}
+.buttonDelete {
+  box-sizing: border-box;
+  background: $background ;
+  outline: none;
+  border: none;
+  color: orangered;
+  font-size: 70px;
+  &:hover {
+    color: red;
+    transition: all 0.3s ease-out;
+  }
+}
