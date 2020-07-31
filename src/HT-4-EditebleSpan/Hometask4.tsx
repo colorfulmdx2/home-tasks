@@ -7,7 +7,7 @@ type HomeTask4Type = {
 
 export const Hometask4 = (props: HomeTask4Type) => {
 
-    const [title, setTitle] = useState("")
+    const [title, setTitle] = useState("INPUT")
     const [error, setError] = useState<boolean>(false)
 
     const onChangeHandler = (value: string) => {
