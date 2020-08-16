@@ -1,4 +1,9 @@
 @import './src/sass/variables.scss';
 select {
   font-size: 40px;
+  //color: $blueColor;
+  //background: $background;
+  &:hover {
+   // background: red;
+  }
 }

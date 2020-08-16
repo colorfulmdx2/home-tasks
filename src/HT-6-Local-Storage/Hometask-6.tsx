@@ -10,13 +10,6 @@ type StateType = {
 
 export const Hometask6 = (props:any) => {
 
-
-    // saveState<StateType>("test", {x: "A", y: 1})
-    // const state: StateType = restoreState<StateType>("test", {x: "", y: 0);
-
-
-
-
     function saveState<T> (key: string, state: T) {
         const stateAsString = JSON.stringify(state);
         localStorage.setItem(key, stateAsString)
@@ -28,7 +21,7 @@ export const Hometask6 = (props:any) => {
         return defaultState;
     }
 
-    const [title, setTitle] = useState('A')
+    const [title, setTitle] = useState('Editable Span')
 
     const onChangeHandler = (value: string) => {
         setTitle(value)
@@ -47,16 +40,25 @@ export const Hometask6 = (props:any) => {
 
     return (
         <div className={stylesHometask6.container}>
-            <EditebleSpan onChangeHandler={onChangeHandler}
-                          onKeyPressHandler={()=>{}}
-                          value={title}
-                          errorStyle={false}/>
-            <Button title={addToLocalStorageTitle}
-                    deletestyle={false}
-                    onClickFunction={addToLocalStorageOnClick}/>
-            <Button title={getFromToLocalStorageTitle}
-                    deletestyle={false}
-                    onClickFunction={getFromToLocalStorageOnClick}/>
+            <div className={stylesHometask6.editableSpan}>
+                <EditebleSpan onChangeHandler={onChangeHandler}
+                              onKeyPressHandler={()=>{}}
+
+                              value={title}
+                              errorStyle={false}/>
+            </div>
+            <div className={stylesHometask6.buttonsContainer}>
+                <div className={stylesHometask6.addButton}>
+                    <Button title={addToLocalStorageTitle}
+                            deletestyle={false}
+                            onClickFunction={addToLocalStorageOnClick}/>
+                </div>
+                <div className={stylesHometask6.getButton}>
+                    <Button title={getFromToLocalStorageTitle}
+                            deletestyle={false}
+                            onClickFunction={getFromToLocalStorageOnClick}/>
+                </div>
+            </div>
         </div>
     )
 }

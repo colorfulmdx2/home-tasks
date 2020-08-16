@@ -9,6 +9,7 @@ function InputHT(props: any) {
 
 
     const [title, setTitle] = useState("")
+    const [error, setError] = useState(false)
 
     const onChangeHandler = (value: string) => {
         setTitle(value)
@@ -16,8 +17,11 @@ function InputHT(props: any) {
 
     const hello = () => {
         if (title.trim()) {
+            setError(false)
             alert('Hello ' + title.trim() + ' !')
+            setTitle('')
         } else {
+            setError(true)
             alert('Type something')
         }
 
@@ -35,12 +39,12 @@ function InputHT(props: any) {
                            onChangeHandler={onChangeHandler}
                            placeholder={'Type your name...'}
                            onKeyPressHandler={onKeyPressHandler}
-                           errorStyle={true}
+                           errorStyle={error}
                     />
                 </div>
                 <div className={styleInput.button}>
                     <Button onClickFunction={hello}
-                            deletestyle={true}
+                            deletestyle={error}
                             title={'+'}
                     />
                 </div>

@@ -33,7 +33,6 @@ export const Hometask7 = () => {
 
 
     const onChangeSelectHandler = (value: string) => {
-        debugger
         let newArr = selectData.map( (el)=> {
             if(el.value === value) {
                 return {...el, selected: true}

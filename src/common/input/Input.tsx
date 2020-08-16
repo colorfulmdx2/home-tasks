@@ -4,7 +4,7 @@ import styleInputComponent from './InputComponent.module.scss'
 export type InputPropsType = {
     onChangeHandler: (value: string) => void
     onKeyPressHandler: () => void
-    value: string
+    value?: string
     placeholder?: string
     errorStyle: boolean
     onBlur?: () => void

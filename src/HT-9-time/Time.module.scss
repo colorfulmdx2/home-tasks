@@ -1,0 +1,13 @@
+@import '../sass/variables';
+
+.container {
+  color: $textColor;
+  background: $background;
+  border-radius: 10px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  font-size: 40px;
+  padding: 10px;
+
+}

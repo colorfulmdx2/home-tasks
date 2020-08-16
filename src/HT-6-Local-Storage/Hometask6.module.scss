@@ -1,7 +1,15 @@
 @import '../sass/variables';
 
 .container {
+  box-sizing: border-box;
   position: absolute;
   top: 300px;
   left: 400px;
+  .buttonsContainer {
+
+    margin: 10px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+  }
 }

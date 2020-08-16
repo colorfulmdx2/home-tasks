@@ -16,7 +16,9 @@ const Button = (props:ButtonType) => {
     return (
         <div className={styleButton.button}>
             <button onClick={onClickHandler}
-                    className={!props.deletestyle ? styleButton.buttonRegular : styleButton.buttonDelete}
+                    className={!props.deletestyle
+                        ? styleButton.buttonRegular
+                        : styleButton.buttonDelete}
             >{props.title}</button>
         </div>
     )
