@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from "react";
+import React, {ChangeEvent, useCallback} from "react";
 import {RadioDataType} from "../../HT-7-Select/Hometask7";
 import styleRadio from './Radio.module.scss'
 
@@ -7,12 +7,12 @@ type RadioPropsType = {
     onChange: (value: string) => void
 }
 
-export const Radio = (props:RadioPropsType) => {
+export const Radio = React.memo((props:RadioPropsType) => {
 
-    const onChangeHandler = (e: any) => {
+    const onChangeHandler = useCallback((e: any) => {
         props.onChange(e.currentTarget.value)
         //props.onChange(e.currentTarget.checked)
-    }
+    },[])
 
     return (
         <div className={styleRadio.container}>
@@ -36,7 +36,7 @@ export const Radio = (props:RadioPropsType) => {
             }
         </div>
     )
-}
+})
 
 /*
 <input type="radio" id="contactChoice1"

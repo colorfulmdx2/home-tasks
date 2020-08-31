@@ -17,7 +17,7 @@ function Links(props:any) {
         <div className={styleLinks.linksItem}><NavLink activeClassName={styleLinks.activeLink} to={'/homework8'}>Homework 8</NavLink></div>
         <div className={styleLinks.linksItem}><NavLink activeClassName={styleLinks.activeLink} to={'/homework9'}>Homework 9</NavLink></div>
         <div className={styleLinks.linksItem}><NavLink activeClassName={styleLinks.activeLink} to={'/homework10'}>Homework 10</NavLink></div>
-        <div className={styleLinks.linksItem}><NavLink to={'/'}>Homework 11</NavLink></div>
+        <div className={styleLinks.linksItem}><NavLink activeClassName={styleLinks.activeLink} to={'/homework11'}>Homework 11</NavLink></div>
         <div className={styleLinks.linksItem}><NavLink to={'/'}>Homework 12</NavLink></div>
         <div className={styleLinks.linksItem}><NavLink to={'/'}>Homework 13</NavLink></div>
         <div className={styleLinks.linksItem}><NavLink to={'/'}>Homework 14</NavLink></div>

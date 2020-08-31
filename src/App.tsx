@@ -12,6 +12,7 @@ import {Hometask7} from "./HT-7-Select/Hometask7";
 import {ReducerHT} from "./HT-8-Reducers/Reducer";
 import {Time} from "./HT-9-time/Time";
 import {Loading} from "./HT-10-Loading/Loading";
+import {RangeHometask} from "./HT-11-Range/RangeHometask";
 
 
 function App(props:any) {
@@ -35,7 +36,7 @@ function App(props:any) {
         <Route path='/homework8' render = {() => <ReducerHT/>}/>
         <Route path='/homework9' render = {() => <Time/>}/>
         <Route path='/homework10' render = {() => <Loading/>}/>
-        {/*<Route path='/homework11' render = {() => }/>*/}
+        <Route path='/homework11' render = {() => <RangeHometask/>}/>
         {/*<Route path='/homework12' render = {() => }/>*/}
         {/*<Route path='/homework13' render = {() => }/>*/}
         {/*<Route path='/homework14' render = {() => }/>*/}

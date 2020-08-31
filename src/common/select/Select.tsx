@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, useCallback} from 'react'
 import styleSelect from './Select.module.scss'
 import {SelectDataType} from "../../HT-7-Select/Hometask7";
 
@@ -8,11 +8,11 @@ type SelectPropsType = {
     checked: boolean
 }
 
-export const Select = (props: SelectPropsType) => {
+export const Select = React.memo((props: SelectPropsType) => {
 
-    const onChangeHandler = (e:ChangeEvent<HTMLSelectElement>) => {
+    const onChangeHandler = useCallback((e:ChangeEvent<HTMLSelectElement>) => {
         props.onChange(e.currentTarget.value)
-    }
+    }, [])
     return (
         <div className={styleSelect.container}>
             <select onChange={onChangeHandler}>
@@ -22,4 +22,4 @@ export const Select = (props: SelectPropsType) => {
             </select>
         </div>
     )
-}
+})

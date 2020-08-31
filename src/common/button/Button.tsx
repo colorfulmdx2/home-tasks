@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import styleButton from './ButtonComponent.module.scss'
 
 type ButtonType = {
@@ -7,11 +7,11 @@ type ButtonType = {
     onClickFunction: () => void
 }
 
-const Button = (props:ButtonType) => {
+const Button = React.memo((props:ButtonType) => {
 
-    const onClickHandler = () => {
+    const onClickHandler = useCallback(() => {
         props.onClickFunction()
-    }
+    }, [])
 
     return (
         <div className={styleButton.button}>
@@ -22,6 +22,6 @@ const Button = (props:ButtonType) => {
             >{props.title}</button>
         </div>
     )
-}
+})
 
 export default Button

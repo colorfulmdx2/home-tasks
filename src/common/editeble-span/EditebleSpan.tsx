@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import styleEditebleSpan from './EditebleSpan.module.scss'
 import Input from "../input/Input";
 
@@ -9,16 +9,16 @@ export type EditebleSpanType = {
     errorStyle: boolean
 }
 
-const EditebleSpan = (props:EditebleSpanType) => {
+const EditebleSpan = React.memo((props:EditebleSpanType) => {
 
     let [editMode, setEditMode] = useState(false);
 
-    const activateEditMode = () => {
+    const activateEditMode = useCallback(() => {
         setEditMode(true);
-    }
-    const activateViewMode = () => {
+    }, [])
+    const activateViewMode = useCallback(() => {
         setEditMode(false);
-    }
+    }, [])
 
     return (
         <div className={styleEditebleSpan.container}>
@@ -38,6 +38,6 @@ const EditebleSpan = (props:EditebleSpanType) => {
             }
         </div>
     )
-}
+})
 
 export default EditebleSpan
